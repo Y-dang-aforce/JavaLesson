@@ -13,19 +13,4 @@ public class Calculator {
  }
 }
 
-public class VariableExample1｛
- public static void main(String args[]) {
-	 int num=10;
-	 System.out.println("変数numの値は"+ num +"です。")；
- }
-}
-
-public class SumExample{
-	public static void main(String args[]) {
-		int a=8;
-		int b=5;
-		int sum=a+b;
-		System.out.println(a+"+"+b+"="+sum);
-	}
-}
 

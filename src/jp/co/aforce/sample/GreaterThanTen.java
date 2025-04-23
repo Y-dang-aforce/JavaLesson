@@ -6,7 +6,8 @@ public class GreaterThanTen {
 		
 		if(num>10) {
 			System.out.println("numは10より大きいです。");
-			
+		}else {
+			System.out.println("numは10の以下です。");
 			
 		}
 	}
