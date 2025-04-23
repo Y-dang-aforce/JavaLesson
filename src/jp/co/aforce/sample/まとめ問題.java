@@ -24,7 +24,7 @@ public class まとめ問題 {
 		default:
 			value="申し訳ございませんが、その商品は取り扱っておりません。";
 		}
-			System.out.println(goods+":"+value);
+		System.out.println(goods+":"+value);
 		sc.close();	
 		
 	}
