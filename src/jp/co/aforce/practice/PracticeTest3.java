@@ -1,6 +1,7 @@
 package jp.co.aforce.practice;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PracticeTest3 {
@@ -19,25 +20,52 @@ public class PracticeTest3 {
 		String element1 = employeeList.get(2);
 		System.out.println(element1);
 
-		List<Integer> numList = new ArrayList<Integer>();
-		numList.add(10);
-		numList.add(11);
-		numList.add(12);
-		numList.add(15);
-		numList.add(16);
-		numList.add(18);
-		numList.add(19);
-		numList.add(20);
-		for (Integer num : numList) {
+		List<Integer> numList1= new ArrayList<Integer>();
+		numList1.add(10);
+		numList1.add(15);
+		numList1.add(16);
+		numList1.add(19);
+		List<Integer> numList2= new ArrayList<Integer>();
+		numList2.add(11);
+		numList2.add(12);
+		numList2.add(18);
+		numList2.add(20);
+		
+		numList1.addAll(numList2);
+		
+		Collections.sort(numList1);
+		
+		for (Integer num : numList1) {
 			System.out.println(num);
-			
-			numList.add(3, 13);
-			numList.add(4, 14);
-			numList.add(7, 17);
-			numList.add(11, 21);
-			for (Integer Num : numList) {
-				System.out.println(Num);
+		}
+		List<Integer> numList3= new ArrayList<Integer>();	
+		numList3.add(13);
+		numList3.add(14);
+		numList3.add(17);
+		numList3.add(21);
+		
+		Collections.sort(numList1);
+		Collections.sort(numList3);
+		
+		int g=0;
+		int j=0;
+		
+		while(g<numList1.size()&&j<numList3.size()) {
+			if(numList1.get(g)<numList3.get(j)) {
+				System.out.println(numList1.get(g));
+				g++;
+			}else {
+				System.out.println(numList3.get(j));
+				j++;
 			}
+		}
+		while(g<numList1.size()) {
+			System.out.println(numList1.get(g));
+			g++;
+		}
+		while(j<numList3.size()) {
+			System.out.println(numList3.get(j));
+			j++;
 		}
 	}
 }

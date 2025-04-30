@@ -1,6 +1,7 @@
 package jp.co.aforce.practice;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
 
@@ -38,24 +39,13 @@ public class PracticeTest4 {
 
 		
 	
-
-		List<Integer> Calender = new ArrayList<Integer>();
-		Calender.add(1);
-		Calender.add(2);
-		Calender.add(3);
-		Calender.add(4);
-		Calender.add(5);
-		Calender.add(6);
-		Calender.add(7);
-		Calender.add(8);
-		Calender.add(9);
-		Calender.add(10);
-		Calender.add(11);
-		Calender.add(12);
-
-		Integer calender = 4;
+		
 		String messages;
-		switch (calender) {
+		
+		Calendar calendar=Calendar.getInstance();
+		
+		int month=calendar.get(Calendar.MONTH)+1;
+		switch (month) {
 		case 1:
 			messages = "冬物セール";
 			break;
@@ -80,6 +70,6 @@ public class PracticeTest4 {
 		default:
 			messages = "不正な月です";
 		}
-		System.out.println("現在の月は：" + calender + "-" + messages);
+		System.out.println("現在の月は：" + month + "-" + messages);
 	}
 }
